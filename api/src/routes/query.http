@@ -1,0 +1,35 @@
+#GET a 
+
+ http://localhost:3001/countries
+
+# ### GET de todo
+# GET http://localhost:3000/posts
+
+# ### GET por query
+# GET http://localhost:3000/posts?title=fede
+
+# ### POST por params y body
+# POST http://localhost:3000/posts/author/nico
+# Content-Type: application/json
+
+# {
+#     "title": "Haciendo un post desde :author",
+#     "contents": "Este fue el quinto post que hice"
+# }
+
+
+# ### PUT por body
+# PUT http://localhost:3000/
+# Content-Type: application/json
+
+# {
+#     "id":"1",
+#     "title":"",
+#     "contents":""
+# }
+
+# ### DELETE
+# DELETE http://localhost:3000/
+
+# ### HEAD
+# HEAD http://localhost:3000/
