@@ -7,9 +7,8 @@ module.exports = (sequelize) => {
     "Country",
     {
       id: {
-        type: DataTypes.UUID,
-        defaultValue: DataTypes.UUIDV4,
-        allowNull: false,
+        type: DataTypes.BIGINT,
+        autoIncrement: true,
         primaryKey: true,
       },
       name: {

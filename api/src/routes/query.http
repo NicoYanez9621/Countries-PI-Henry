@@ -1,6 +1,33 @@
-#GET a 
-
+###GET a /countries
  http://localhost:3001/countries
+
+
+###GET a /countries?name=peru
+ GET http://localhost:3001/countries?name=peru
+
+
+###GET a /countries/:idCountry
+ GET http://localhost:3001/countries/1
+
+###POST a /activity
+
+POST  http://localhost:3001/activity
+Content-Type: application/json
+
+{
+     "name": "Escalar",
+     "difficulty": "5",
+     "duration": "20 minutos",
+     "season": "Otoño",
+     "countriesId": "120",
+}
+
+
+
+
+
+
+
 
 # ### GET de todo
 # GET http://localhost:3000/posts
