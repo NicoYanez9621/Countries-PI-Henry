@@ -4,7 +4,9 @@ const { Country, TouristActivity } = require("../../db");
 const get_Countries = async (req, res) => {
   const { name } = req.query;
   let getCountry = async () => {
-    let countriesDb = await Country.findAll();
+    let countriesDb = await Country.findAll(/* {
+      include: TouristActivity,
+    } */);
     return countriesDb;
   };
   let countries = getCountry();

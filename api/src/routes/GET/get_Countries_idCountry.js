@@ -1,10 +1,12 @@
 const { Country, TouristActivity } = require("../../db");
 
 const get_Countries_idCountry = async (req, res) => {
-  const { id } = req.params;
+  const { idCountry } = req.params;
   try {
-    if (id) {
-      let country = await Country.findByPk(id, { include: TouristActivity });
+    if (idCountry) {
+      let country = await Country.findByPk(Number(idCountry), {
+        include: TouristActivity,
+      });
       return res.status(200).json({ country });
     }
   } catch (err) {
