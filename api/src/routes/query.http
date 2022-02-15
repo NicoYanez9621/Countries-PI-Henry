@@ -7,7 +7,7 @@
 
 
 ###GET a /countries/:idCountry
- GET http://localhost:3001/countries/1
+ GET http://localhost:3001/countries/10
 
 ###POST a /activity
 

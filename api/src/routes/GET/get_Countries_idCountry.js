@@ -7,7 +7,11 @@ const get_Countries_idCountry = async (req, res) => {
       let country = await Country.findByPk(Number(idCountry), {
         include: TouristActivity,
       });
-      return res.status(200).json({ country });
+      if (!country) {
+        return res.status(400).json({ error: "provided id not found" });
+      } else {
+        return res.status(200).json({ country });
+      }
     }
   } catch (err) {
     return res.json({ error: err });
