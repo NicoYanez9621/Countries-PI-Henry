@@ -14,13 +14,7 @@
 POST  http://localhost:3001/activity
 Content-Type: application/json
 
-{
-     "name": "Escalar",
-     "difficulty": "5",
-     "duration": "20 minutos",
-     "season": "Otoño",
-     "countriesId": "120",
-}
+{"name": "Escalar","difficulty": "5","duration": "20 minutos","season": "Otoño","countriesId": "120",}
 
 
 

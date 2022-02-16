@@ -4,19 +4,20 @@ const { Country, TouristActivity } = require("../../db");
 const get_Countries = async (req, res) => {
   const { name } = req.query;
   let getCountry = async () => {
-    let countriesDb = await Country.findAll(/* {
+    let countriesDb = await Country.findAll({
       include: TouristActivity,
-    } */);
+    });
     return countriesDb;
   };
+
   let countries = getCountry();
   //console.log(countries);
   countries.then((r) => {
     //si hay datos en la base de datos los uso y entrego todos los paises
     if (r.length > 0) {
       if (name) {
-        let countryFiltrado = r.filter(
-          (e) => e.name.toLowerCase().search(name.toLowerCase()) >= 0
+        let countryFiltrado = r.filter((e) =>
+          e.name.toLowerCase().includes(name.toLowerCase())
         );
         if (countryFiltrado.length > 0) {
           return res.json(countryFiltrado);
@@ -26,7 +27,7 @@ const get_Countries = async (req, res) => {
             .json({ error: "country not found or misspelled" });
         }
       } else {
-        res.json(r);
+        return res.json(r);
       }
     } else {
       // si no hay anda en la base de datos hago la peticion y guardo los datos en la base de datos
@@ -60,8 +61,8 @@ const get_Countries = async (req, res) => {
         .then(() => {
           let countriesGuardadosDb = getCountry();
           if (name) {
-            let countryFiltrado = countriesGuardadosDb.filter(
-              (e) => e.name.toLowerCase().search(name.toLowerCase()) >= 0
+            let countryFiltrado = countriesGuardadosDb.filter((e) =>
+              e.name.toLowerCase().includes(name.toLowerCase())
             );
             if (countryFiltrado.length > 0) {
               return res.json(countryFiltrado);

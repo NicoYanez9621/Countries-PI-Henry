@@ -1,8 +1,10 @@
-const { TouristActivity } = require("../../db");
+const { TouristActivity, Country } = require("../../db");
 
 const get_Activity = async (req, res) => {
   let get_Activity = async () => {
-    let activityDb = await TouristActivity.findAll();
+    let activityDb = await TouristActivity.findAll({
+      include: { model: Country },
+    });
     return activityDb;
   };
   let activity = get_Activity();
