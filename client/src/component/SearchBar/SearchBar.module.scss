@@ -1,0 +1,23 @@
+.contenedor {
+  position: absolute;
+  right: 30px;
+  input {
+    border: rgb(0, 0, 0) solid 1px;
+    margin: 20px;
+    border-radius: 20px;
+    height: 38px;
+  }
+  .inputText {
+    width: 250px;
+  }
+  .inputSubmit {
+    background-color: rgb(255, 255, 255);
+    color: black;
+    width: 100px;
+    padding: 8px;
+  }
+  .inputSubmit:hover {
+    background-color: rgb(73, 167, 225);
+    cursor: pointer;
+  }
+}

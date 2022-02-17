@@ -1,0 +1,28 @@
+.contenedor {
+  background-color: rgb(36, 36, 36);
+  height: 100px;
+  color: rgb(255, 255, 255);
+  font-size: 25px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  .link {
+    text-decoration: none;
+    color: white;
+  }
+
+  span {
+    margin-left: 30px;
+    align-items: center;
+    background-color: rgb(73, 167, 225);
+    border-radius: 20px;
+    padding: 8px;
+    height: 38px;
+  }
+  span:hover {
+    background-color: rgb(27, 98, 141);
+    border-radius: 20px;
+  }
+}
