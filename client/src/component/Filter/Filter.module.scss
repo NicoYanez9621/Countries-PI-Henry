@@ -1,0 +1,20 @@
+.contenedor {
+  background-color: rgba(0, 0, 0, 0.767);
+  color: white;
+  width: 400px;
+  height: 400px;
+  border-radius: 20px;
+  justify-content: flex-start;
+  text-align: center;
+  position: relative;
+  top: 90px;
+  left: 10px;
+  span {
+    margin-left: 10px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    font-size: 20px;
+  }
+}

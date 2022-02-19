@@ -1,0 +1,11 @@
+.contenedor {
+  color: white;
+  .contenido {
+    display: flex;
+    justify-content: flex-start;
+    position: relative;
+    .cards {
+      width: 100%;
+    }
+  }
+}

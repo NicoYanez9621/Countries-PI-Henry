@@ -1,23 +1,20 @@
-//import { get_countries } from "./redux/reducer/index";
-import React, { useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
-import CountryCards from "./component/Cards/CountryCards";
-import Nav from "./component/Nav/Nav";
-import { useDispatch } from "react-redux";
-import { get_countries } from "./redux/actions/index";
+import style from "./App.module.scss";
+import Welcome from "./component/Welcome/Welcome";
+import ActivityCards from "./component/Cards/ActivityCards";
+import ActivityCreate from "./component/Form/ActivityCreate";
+import Home from "./component/Home/Home";
 
 function App() {
-  const dispatch = useDispatch();
-  useEffect(() => {
-    dispatch(get_countries());
-  }, [dispatch]);
   return (
-    <>
-      <Nav />
+    <div className={style.App}>
       <Routes>
-        <Route path="/countries" element={<CountryCards />} />
+        <Route path="/" element={<Welcome />} />
+        <Route path="/home" element={<Home />} />
+        <Route path="/activities" element={<ActivityCards />} />
+        <Route path="/activities/create" element={<ActivityCreate />} />
       </Routes>
-    </>
+    </div>
   );
 }
 

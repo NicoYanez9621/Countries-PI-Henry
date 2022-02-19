@@ -1,0 +1,9 @@
+.contenedor {
+  color: white;
+
+  .contenido {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}

@@ -1,14 +1,7 @@
 import React from "react";
 import style from "./CountryCard.module.scss";
 
-const CountryCard = ({
-  name,
-  flag,
-  area,
-  continent,
-  population,
-  TouristActivities,
-}) => {
+const CountryCard = ({ name, flag, area, continent, population }) => {
   return (
     <div className={style.contenedor}>
       <div className={style.flag}>
@@ -16,9 +9,7 @@ const CountryCard = ({
       </div>
       <div className={style.info}>
         <h2>{name}</h2>
-        <span>Area: {area}</span>
         <span>Continente: {continent}</span>
-        <span>Poblacion: {population}</span>
       </div>
     </div>
   );

@@ -1,10 +1,13 @@
-.contenedor {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, 400px);
-  justify-content: center;
-  padding: 20px;
-  padding-top: 40px;
-  position: relative;
-  width: 100%;
-  height: 100%;
+.link {
+  text-decoration: none;
+  .contenedor {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 400px);
+    justify-content: center;
+    padding: 20px;
+    padding-top: 40px;
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
 }
