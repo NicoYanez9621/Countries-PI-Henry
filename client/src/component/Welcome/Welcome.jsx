@@ -4,11 +4,19 @@ import style from "./Welcome.module.scss";
 
 const Welcome = () => {
   return (
-    <div>
-      <h1>Welcome</h1>
-      <Link className={style.link} to={`/home`}>
-        Continuar
-      </Link>
+    <div className={style.loginBox}>
+      <h1>Welcome to Countries-App</h1>
+      <form>
+        <Link to={`/home`}>
+          <a href="http://localhost:3000/home">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            Continue
+          </a>
+        </Link>
+      </form>
     </div>
   );
 };
