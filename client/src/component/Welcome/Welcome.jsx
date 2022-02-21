@@ -13,7 +13,7 @@ const Welcome = () => {
             <span></span>
             <span></span>
             <span></span>
-            Continue
+            Continue Home
           </a>
         </Link>
       </form>

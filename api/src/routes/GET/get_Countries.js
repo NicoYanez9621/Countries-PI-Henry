@@ -37,6 +37,7 @@ const get_Countries = async (req, res) => {
           let countriesApi = [];
           respon.data.map((c) => {
             let obj = {
+              code: c.cca3,
               name: c.name.common,
               flag: c.flags[0],
               continent: c.region,
