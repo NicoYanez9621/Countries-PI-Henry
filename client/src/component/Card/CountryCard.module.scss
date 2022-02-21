@@ -1,45 +1,51 @@
-.contenedor {
-  background-color: rgba(0, 0, 0, 0.767);
-  color: white;
-  border: rgb(255, 255, 255) solid 3px;
-  border-radius: 50px;
-  display: flex;
-  flex-direction: column;
-  width: 300px;
-  height: 300px;
-  margin: 10px;
-  margin-top: 30px;
-  box-shadow: 10px 10px 5px black;
-  position: relative;
-  transition: all 0.3s ease-in;
-  .flag {
+.link {
+  text-decoration: none;
+  .contenedor {
+    background-color: rgba(0, 0, 0, 0.767);
+    color: white;
+    border: rgb(255, 255, 255) solid 3px;
+    border-radius: 50px;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-content: center;
-    margin-top: 40px;
-    img {
-      width: 180px;
-      height: 100px;
-    }
-  }
-  .info {
-    h2,
-    span {
+    flex-direction: column;
+    width: 250px;
+    height: 250px;
+    margin: 10px;
+    margin-top: 30px;
+    box-shadow: 10px 10px 5px black;
+    position: relative;
+    transition: all 0.3s ease-in;
+    .flag {
       display: flex;
       flex-direction: row;
       justify-content: center;
-      align-content: flex-end;
+      align-content: center;
+      margin-top: 40px;
+      img {
+        width: 140px;
+        height: 90px;
+      }
     }
-    span {
-      margin-left: 68px;
-      justify-content: flex-start;
-      font-size: 20px;
+    .info {
+      h2,
+      span {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-content: flex-end;
+      }
+      h2 {
+        font-size: 20px;
+      }
+      span {
+        margin-left: 68px;
+        justify-content: flex-start;
+        font-size: 17px;
+      }
     }
   }
-}
 
-.contenedor:hover {
-  transform: scale(1.1);
-  cursor: pointer;
+  .contenedor:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+  }
 }

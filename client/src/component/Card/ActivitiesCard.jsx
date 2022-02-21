@@ -7,7 +7,9 @@ const ActivitiesCard = ({ name, difficulty, duration, season }) => {
       <h2>{name}</h2>
       <span>Difficulty: {difficulty}</span>
       <span>Duration: {duration}</span>
-      <span>Season: {season}</span>
+      {season.map((s) => (
+        <span>Season: {s}</span>
+      ))}
     </div>
   );
 };

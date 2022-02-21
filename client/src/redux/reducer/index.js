@@ -1,8 +1,18 @@
-import { GET_COUNTRIES, GET_ACTIVITIES } from "../actions/index";
+import {
+  GET_COUNTRIES,
+  GET_ACTIVITIES,
+  GET_COUNTRY_NAME,
+  SEARCH_COUNTRIES,
+} from "../actions/index";
+
+import { filterByName } from "../metodos/filterByName";
 
 const initialstate = {
   countries: [],
+  country: [],
   activities: [],
+
+  searchCountries: [],
 };
 
 const rootReducer = (state = initialstate, { type, payload }) => {
@@ -17,6 +27,19 @@ const rootReducer = (state = initialstate, { type, payload }) => {
       return {
         ...state,
         activities: [...payload],
+      };
+    }
+    case GET_COUNTRY_NAME: {
+      return {
+        ...state,
+        country: [...payload],
+      };
+    }
+    case SEARCH_COUNTRIES: {
+      let filtered = filterByName(state.countries, payload);
+      return {
+        ...state,
+        searchCountries: filtered,
       };
     }
 

@@ -1,5 +1,26 @@
-.link {
-  text-decoration: none;
+.contenedorGral {
+  position: relative;
+  button {
+    margin-top: 20px;
+    margin-left: 20px;
+    width: 100px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    border: none;
+  }
+  button:hover {
+    cursor: pointer;
+    background-color: #1f53c5;
+    color: white;
+  }
+  label {
+    margin-left: 20px;
+    padding: 4px;
+    background-color: white;
+    border-radius: 5px;
+    color: black;
+  }
   .contenedor {
     display: grid;
     grid-template-columns: repeat(auto-fill, 400px);
