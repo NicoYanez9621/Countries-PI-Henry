@@ -121,7 +121,6 @@ const CountryCards = () => {
       final.pop();
     }
   }
-  console.log(final);
   return (
     <div className={style.contenedorGral}>
       <button onClick={handlerPrev} value={1}>
@@ -136,6 +135,7 @@ const CountryCards = () => {
           final[state.paginaActual].map((c) => (
             <CountryCard
               key={c.id}
+              id={c.id}
               name={c.name}
               flag={c.flag}
               continent={c.continent}

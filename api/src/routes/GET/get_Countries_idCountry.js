@@ -10,7 +10,7 @@ const get_Countries_idCountry = async (req, res) => {
       if (!country) {
         return res.status(400).json({ error: "provided id not found" });
       } else {
-        return res.status(200).json({ country });
+        return res.status(200).json(country);
       }
     }
   } catch (err) {

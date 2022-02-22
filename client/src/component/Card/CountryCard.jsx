@@ -2,9 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 import style from "./CountryCard.module.scss";
 
-const CountryCard = ({ name, flag, area, continent, population }) => {
+const CountryCard = ({ id, name, flag, continent }) => {
   return (
-    <Link className={style.link} to={`/countries/:idCountry`}>
+    <Link className={style.link} to={`/countries/${id}`}>
       <div className={style.contenedor}>
         <div className={style.flag}>
           <img src={flag} alt="img not found" />

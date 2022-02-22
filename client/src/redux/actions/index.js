@@ -1,6 +1,7 @@
 import axios from "axios";
 
 export const GET_COUNTRIES = "GET_COUNTRIES";
+export const GET_COUNTRY_BY_ID = "GET_COUNTRY_BY_ID";
 export const GET_COUNTRY_NAME = "GET_COUNTRY_NAME";
 export const GET_ACTIVITIES = "GET_ACTIVITIES";
 export const SEARCH_COUNTRIES = "SEARCH_COUNTRIES";
@@ -16,6 +17,16 @@ export const get_countries = () => async (dispatch) => {
     console.log(error);
   }
 };
+
+export const getCountryById = (id) => async (dispatch) => {
+  try {
+    let response = await axios.get(`http://localhost:3001/countries/${id}`);
+    return dispatch({ type: GET_COUNTRY_BY_ID, payload: response.data });
+  } catch (error) {
+    console.log(error);
+  }
+};
+
 export const get_country_name =
   (filtering_and_ordering) => async (dispatch) => {
     try {
