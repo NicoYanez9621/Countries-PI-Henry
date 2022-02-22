@@ -19,7 +19,9 @@ const CountryCards = () => {
 
   const handlerPrev = (e) => {
     if (state.paginaActual !== 0) {
-      setState({ paginaActual: state.paginaActual - e.target.value });
+      setState({
+        paginaActual: parseInt(state.paginaActual) - parseInt(e.target.value),
+      });
     }
   };
 

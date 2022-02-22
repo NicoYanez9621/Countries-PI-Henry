@@ -49,7 +49,15 @@ const ActivityCreateForm = () => {
 
   const onSubmit = (e) => {
     e.preventDefault();
-    dispatch(save_activity(formatData));
+    if (
+      formatData.name &&
+      formatData.difficulty &&
+      formatData.duration &&
+      formatData.season &&
+      formatData.countriesId
+    ) {
+      dispatch(save_activity(formatData));
+    }
   };
 
   const disabeledSubmit = useMemo(() => {

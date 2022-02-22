@@ -2,20 +2,17 @@
   background-color: rgba(0, 0, 0, 0.767);
   color: white;
   border: rgb(255, 255, 255) solid 3px;
-  border-radius: 50px;
+  border-radius: 30px;
   display: flex;
   flex-direction: column;
   width: 300px;
-  height: 260px;
+  height: 280px;
   margin: 10px;
-  margin-top: 30px;
+  margin-top: 10px;
   box-shadow: 10px 10px 5px black;
-  position: relative;
-  transition: all 0.3s ease-in;
   h2,
   span {
     display: flex;
-    flex-direction: row;
     justify-content: center;
     align-content: flex-end;
   }
@@ -23,5 +20,16 @@
     margin-left: 68px;
     justify-content: flex-start;
     font-size: 20px;
+  }
+  li {
+    justify-content: center;
+    display: flex;
+    list-style-type: none;
+    margin-left: 0.3rem;
+    padding: 0.3rem;
+    border-radius: 0.3rem;
+    font-size: 12px;
+    border: 1px solid #ffffff;
+    width: 92%;
   }
 }

@@ -9,7 +9,7 @@
     align-items: center;
     gap: 1rem;
     background-color: rgba(0, 0, 0, 0.836);
-    height: 600px;
+    height: auto;
     width: 65%;
     border-radius: 10px;
     margin: auto;
@@ -72,7 +72,7 @@
     }
     .botons {
       width: 50%;
-      background: #1f53c5;
+      background: #123174;
       border-radius: 5px;
       border: none;
       padding: 12px;
@@ -85,6 +85,11 @@
       cursor: pointer;
     }
   }
+  @media screen and (min-width: 360px) {
+    .form {
+      width: 95%;
+    }
+  }
   @media screen and (min-width: 678px) {
     .form {
       width: 90%;
@@ -93,6 +98,7 @@
   @media screen and (min-width: 1024px) {
     .form {
       width: 80%;
+      padding: 0.3rem;
     }
   }
 }
