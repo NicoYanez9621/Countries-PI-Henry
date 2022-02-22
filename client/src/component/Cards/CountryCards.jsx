@@ -10,6 +10,7 @@ const CountryCards = () => {
   useEffect(() => {
     dispatch(get_countries());
   }, [dispatch]);
+
   let countries = useSelector((state) => state.countries);
 
   const [state, setState] = useState({
@@ -118,11 +119,16 @@ const CountryCards = () => {
       final.pop();
     }
   }
+  console.log(final);
   return (
     <div className={style.contenedorGral}>
-      <button onClick={handlerPrev}>Anterior</button>
-      <label>1</label>
-      <button onClick={handlerNext}>Siguiente</button>
+      <button onClick={handlerPrev} value={1}>
+        Anterior
+      </button>
+      <span className={style.span}>{state.paginaActual}</span>
+      <button onClick={handlerNext} value={1}>
+        Siguiente
+      </button>
       <div className={style.contenedor}>
         {final[state.paginaActual] &&
           final[state.paginaActual].map((c) => (

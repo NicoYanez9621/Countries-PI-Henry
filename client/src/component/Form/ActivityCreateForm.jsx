@@ -68,55 +68,61 @@ const ActivityCreateForm = () => {
     <div className={style.contenedor}>
       <Nav />
       <div className={style.form}>
-        <h1>Create Activity</h1>
+        <h2>Create Activity</h2>
         <form
           onSubmit={(e) => {
             onSubmit(e);
           }}
         >
-          <input
-            type="text"
-            className={style.input}
-            name="name"
-            id="name"
-            placeholder="Activity Name"
-            onChange={(e) => handleInputChange(e)}
-          />
-          {error.name && <p className={style.error}>{error.name}</p>}
+          <div className={style.group}>
+            <input
+              type="text"
+              className={style.input}
+              name="name"
+              id="name"
+              placeholder="Activity Name"
+              onChange={(e) => handleInputChange(e)}
+            />
+            {error.name && <p className={style.error}>{error.name}</p>}
+          </div>
 
-          <label htmlFor="difficulty">Difficulty:</label>
-          <select
-            id="difficulty"
-            name="difficulty"
-            value={formatData.difficulty}
-            onChange={(e) => handleInputChange(e)}
-            className={style.mainSelect}
-          >
-            <option value="none">Select an option...</option>
-            <option value="1">very easy</option>
-            <option value="2">easy</option>
-            <option value="3">medium</option>
-            <option value="4">hard</option>
-            <option value="5">very hard</option>
-          </select>
-          {error.difficulty && (
-            <p className={style.error}>{error.difficulty}</p>
-          )}
+          <div className={style.groupTwo}>
+            <label htmlFor="difficulty">Difficulty:</label>
+            <select
+              id="difficulty"
+              name="difficulty"
+              value={formatData.difficulty}
+              onChange={(e) => handleInputChange(e)}
+              className={style.mainSelect}
+            >
+              <option value="none">Select an option...</option>
+              <option value="1">very easy</option>
+              <option value="2">easy</option>
+              <option value="3">medium</option>
+              <option value="4">hard</option>
+              <option value="5">very hard</option>
+            </select>
+            {error.difficulty && (
+              <p className={style.error}>{error.difficulty}</p>
+            )}
+          </div>
 
-          <label htmlFor="duration">Duration:</label>
-          <select
-            id="duration"
-            value={formatData.duration}
-            name="duration"
-            onChange={(e) => handleInputChange(e)}
-            className={style.mainSelect}
-          >
-            <option value="none">Select an option...</option>
-            <option value="1 dia">1 día</option>
-            <option value="2 dias">2 días</option>
-            <option value="3 dias">3 días</option>
-          </select>
-          {error.duration && <p className={style.error}>{error.duration}</p>}
+          <div className={style.group}>
+            <label htmlFor="duration">Duration:</label>
+            <select
+              id="duration"
+              value={formatData.duration}
+              name="duration"
+              onChange={(e) => handleInputChange(e)}
+              className={style.mainSelect}
+            >
+              <option value="none">Select an option...</option>
+              <option value="1 dia">1 día</option>
+              <option value="2 dias">2 días</option>
+              <option value="3 dias">3 días</option>
+            </select>
+            {error.duration && <p className={style.error}>{error.duration}</p>}
+          </div>
 
           <p>
             Please choose the season (as) in which this activity is practiced
@@ -165,21 +171,24 @@ const ActivityCreateForm = () => {
           </div>
           {error.season && <p className={style.error}>{error.season}</p>}
 
-          <SearchCountry
-            formData={formatData}
-            setFormData={setFormatData}
-            errors={error}
-            setErrors={setError}
-          />
-          <SelectedCountries
-            formData={formatData}
-            setFormData={setFormatData}
-            errors={error}
-            setErrors={setError}
-          />
-          {error.countriesId && (
-            <p className={style.error}>{error.countriesId}</p>
-          )}
+          <div className={style.countrySearch}>
+            <SearchCountry
+              formData={formatData}
+              setFormData={setFormatData}
+              errors={error}
+              setErrors={setError}
+            />
+            <SelectedCountries
+              formData={formatData}
+              setFormData={setFormatData}
+              errors={error}
+              setErrors={setError}
+            />
+            {error.countriesId && (
+              <p className={style.error}>{error.countriesId}</p>
+            )}
+          </div>
+
           <input
             type="submit"
             className={style.botons}
