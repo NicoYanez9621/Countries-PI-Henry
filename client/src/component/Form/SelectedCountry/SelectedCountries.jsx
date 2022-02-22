@@ -28,7 +28,7 @@ const SelectedCountries = ({ formData, setFormData, errors, setErrors }) => {
               return (
                 <li key={id}>
                   {country.name}
-                  <span onClick={(id) => removeFromCountries(id)}>x</span>
+                  <span onClick={(id) => removeFromCountries(id)}>X</span>
                 </li>
               );
             })

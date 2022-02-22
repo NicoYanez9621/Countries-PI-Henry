@@ -10,7 +10,7 @@ import SelectedCountries from "./SelectedCountry/SelectedCountries";
 
 const ActivityCreateForm = () => {
   const [formatData, setFormatData] = useState({
-    name: "",
+    name: " ",
     difficulty: "none",
     duration: "none",
     season: [],
@@ -57,6 +57,14 @@ const ActivityCreateForm = () => {
       formatData.countriesId
     ) {
       dispatch(save_activity(formatData));
+      alert("Activity created successfully");
+      setFormatData({
+        name: " ",
+        difficulty: "none",
+        duration: "none",
+        season: [],
+        countriesId: [],
+      });
     }
   };
 
