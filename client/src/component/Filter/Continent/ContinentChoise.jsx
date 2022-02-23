@@ -5,7 +5,6 @@ import style from "./ContinentChoise.module.scss";
 import { filter_countries } from "../../../redux/actions/index";
 
 const ContinentChoise = () => {
-  let continent = useSelector((state) => state.continents);
   let filter_and_order = useSelector((state) => state.filtering_and_ordering);
   const dispatch = useDispatch();
 
@@ -34,24 +33,92 @@ const ContinentChoise = () => {
           />
 
           <label htmlFor="all">All</label>
-          {continent.map((continent, index) => (
-            <div key={index}>
-              <input
-                type="radio"
-                className={style.hidden}
-                name="continent"
-                value={continent}
-                id={continent}
-                onChange={(e) => handleCheckbox(e)}
-                checked={
-                  filter_and_order.byContinent.includes(continent)
-                    ? true
-                    : false
-                }
-              />
-              <label htmlFor={continent}>{continent}</label>
-            </div>
-          ))}
+          <div key={1}>
+            <input
+              type="radio"
+              className={style.hidden}
+              name="continent"
+              value="Asia"
+              id="Asia"
+              onChange={(e) => handleCheckbox(e)}
+              checked={
+                filter_and_order.byContinent.includes("Asia") ? true : false
+              }
+            />
+            <label htmlFor={"Asia"}>{"Asia"}</label>
+          </div>
+          <div key={2}>
+            <input
+              type="radio"
+              className={style.hidden}
+              name="continent"
+              value="Americas"
+              id="Americas"
+              onChange={(e) => handleCheckbox(e)}
+              checked={
+                filter_and_order.byContinent.includes("Americas") ? true : false
+              }
+            />
+            <label htmlFor={"Americas"}>{"Americas"}</label>
+          </div>
+          <div key={3}>
+            <input
+              type="radio"
+              className={style.hidden}
+              name="continent"
+              value="Africa"
+              id="Africa"
+              onChange={(e) => handleCheckbox(e)}
+              checked={
+                filter_and_order.byContinent.includes("Africa") ? true : false
+              }
+            />
+            <label htmlFor={"Africa"}>{"Africa"}</label>
+          </div>
+          <div key={4}>
+            <input
+              type="radio"
+              className={style.hidden}
+              name="continent"
+              value="Europe"
+              id="Europe"
+              onChange={(e) => handleCheckbox(e)}
+              checked={
+                filter_and_order.byContinent.includes("Europe") ? true : false
+              }
+            />
+            <label htmlFor={"Europe"}>{"Europe"}</label>
+          </div>
+          <div key={5}>
+            <input
+              type="radio"
+              className={style.hidden}
+              name="continent"
+              value="Oceania"
+              id="Oceania"
+              onChange={(e) => handleCheckbox(e)}
+              checked={
+                filter_and_order.byContinent.includes("Oceania") ? true : false
+              }
+            />
+            <label htmlFor={"Oceania"}>{"Oceania"}</label>
+          </div>
+          <div key={6}>
+            <input
+              type="radio"
+              className={style.hidden}
+              name="continent"
+              value="Antarctic"
+              id="Antarctic"
+              onChange={(e) => handleCheckbox(e)}
+              checked={
+                filter_and_order.byContinent.includes("Antarctic")
+                  ? true
+                  : false
+              }
+            />
+            <label htmlFor={"Antarctic"}>{"Antarctic"}</label>
+          </div>
         </div>
       </form>
     </div>

@@ -18,7 +18,6 @@ const initialstate = {
 
   countries: [],
   countryById: {},
-  continents: [],
   currentCountries: [],
   searchCountries: [],
 
@@ -37,6 +36,7 @@ const rootReducer = (state = initialstate, { type, payload }) => {
         ...state,
         countries: [...payload],
         currentCountries: [...payload],
+        searchCountries: payload,
       };
     }
 
@@ -101,6 +101,7 @@ const rootReducer = (state = initialstate, { type, payload }) => {
 
       return {
         ...state,
+        filtering_and_ordering: payload,
         currentCountries: filtered,
       };
     }

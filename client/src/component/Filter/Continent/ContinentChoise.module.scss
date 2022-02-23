@@ -4,7 +4,7 @@
   flex-direction: column;
   align-items: center;
   gap: 0.1rem;
-  margin-top: 25%;
+  margin-top: 18%;
   .checkbox {
     width: 80%;
     color: white;
@@ -18,7 +18,7 @@
       transition: all 0.3s;
     }
     input[type="radio"] + label:hover {
-      color: #002448;
+      color: white;
       border: 0.7px solid;
       border-color: #002448;
     }
