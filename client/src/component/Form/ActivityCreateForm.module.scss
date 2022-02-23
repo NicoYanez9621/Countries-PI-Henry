@@ -28,17 +28,19 @@
       display: flex;
       gap: 1rem;
       margin-bottom: 1rem;
+      margin-left: 2rem;
       .mainSelect {
         height: 1.5rem;
         border-radius: 3px;
       }
     }
     .group {
-      width: inherit;
+      width: 80%;
       display: flex;
       flex-direction: column;
       gap: 0.2rem;
       margin-bottom: 1.5rem;
+      margin-left: 2rem;
       .mainSelect {
         margin-top: 0.5rem;
         height: 1.5rem;
@@ -46,6 +48,7 @@
       }
       input {
         margin-bottom: 1rem;
+        margin-left: 2rem;
         height: 2rem;
         border-radius: 1.5rem;
         padding: 0.2rem 1rem;
@@ -64,11 +67,13 @@
       align-items: center;
       gap: 0.2rem;
       margin-right: 1.5rem;
+      margin-left: 2rem;
     }
     .countrySearch {
-      width: inherit;
+      width: 80%;
       display: flex;
       flex-wrap: wrap;
+      margin-left: 2rem;
     }
     .botons {
       width: 50%;
@@ -79,6 +84,7 @@
       color: white;
       margin: 16px 0;
       font-size: 16px;
+      margin-left: 8rem;
     }
     .botons:hover {
       background: #143988;

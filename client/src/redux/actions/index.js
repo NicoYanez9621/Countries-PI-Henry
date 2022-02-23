@@ -5,6 +5,8 @@ export const GET_COUNTRY_BY_ID = "GET_COUNTRY_BY_ID";
 export const GET_COUNTRY_NAME = "GET_COUNTRY_NAME";
 export const GET_ACTIVITIES = "GET_ACTIVITIES";
 export const SEARCH_COUNTRIES = "SEARCH_COUNTRIES";
+export const FILTER_COUNTRIES = "FILTER_COUNTRIES";
+export const ORDER_COUNTRIES = "ORDER_COUNTRIES";
 
 export const get_countries = () => async (dispatch) => {
   try {
@@ -33,7 +35,6 @@ export const get_country_name =
       let { data } = await axios.get(
         `http://localhost:3001/countries?name=${filtering_and_ordering.byName}`
       );
-      console.log("Respuesta: ", data);
       return dispatch({
         type: GET_COUNTRY_NAME,
         payload: { data, filtering_and_ordering },
@@ -64,6 +65,18 @@ export const save_activity = (data) => async (dispatch) => {
   }
 };
 
+/**********************************************************/
+/**********************************************************/
+/**********************************************************/
+
 export const search_countries = (data) => {
   return { type: SEARCH_COUNTRIES, payload: data };
+};
+
+export const filter_countries = (data) => {
+  return { type: FILTER_COUNTRIES, payload: data };
+};
+
+export const order_countries = (data) => {
+  return { type: ORDER_COUNTRIES, payload: data };
 };

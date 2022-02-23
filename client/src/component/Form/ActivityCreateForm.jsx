@@ -140,9 +140,7 @@ const ActivityCreateForm = () => {
             {error.duration && <p className={style.error}>{error.duration}</p>}
           </div>
 
-          <p>
-            Please choose the season (as) in which this activity is practiced
-          </p>
+          <p>Please choose the season (as)</p>
           <div className={style.groupTwo}>
             <div className={style.season}>
               <label htmlFor="summer">Summer</label>

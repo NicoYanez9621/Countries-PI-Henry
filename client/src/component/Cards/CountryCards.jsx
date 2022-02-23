@@ -11,7 +11,7 @@ const CountryCards = () => {
     dispatch(get_countries());
   }, [dispatch]);
 
-  let countries = useSelector((state) => state.countries);
+  let countries = useSelector((state) => state.currentCountries);
 
   const [state, setState] = useState({
     paginaActual: 0,

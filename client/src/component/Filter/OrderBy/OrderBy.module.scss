@@ -1,0 +1,22 @@
+.container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  label {
+    margin-right: 0.5rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    label {
+      font-size: 12px;
+    }
+  }
+}
+@media screen and (min-width: 968px) {
+  .container {
+    label {
+      font-size: 14px;
+    }
+  }
+}
