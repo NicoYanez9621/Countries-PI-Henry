@@ -20,9 +20,11 @@ const SearchBar = () => {
     <div className={style.contenedor}>
       <form onSubmit={(e) => handleOnSubmit(e)}>
         <input
+          autoComplete="off"
+          name="name"
           className={style.inputText}
-          type="text"
-          placeholder="Search Country..."
+          type="onSubmit"
+          placeholder="Search Country by name..."
         />
         <input className={style.inputSubmit} type="submit" value="Search" />
       </form>
