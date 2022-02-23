@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { get_activities } from "../../redux/actions";
 import ActivitiesCard from "../Card/ActivitiesCard";
+import ActivitiesChoise from "../Filter/Activities/ActivitiesChoise";
 import Nav from "../Nav/Nav";
 import style from "./ActivityCards.module.scss";
 
@@ -15,7 +16,9 @@ const ActivityCards = () => {
   return (
     <div className={style.contenedor}>
       <Nav />
+
       <div className={style.contenido}>
+        {/*  <ActivitiesChoise /> */}
         {activities?.map((a) => (
           <ActivitiesCard
             key={a.id}

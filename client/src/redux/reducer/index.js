@@ -36,6 +36,7 @@ const rootReducer = (state = initialstate, { type, payload }) => {
       return {
         ...state,
         countries: [...payload],
+        currentCountries: [...payload],
       };
     }
 
