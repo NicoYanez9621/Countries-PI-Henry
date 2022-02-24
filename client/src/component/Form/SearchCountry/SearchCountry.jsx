@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { search_countries } from "../../../redux/actions/index";
-import styles from "./SearchCountry.module.scss";
+import styles from "../../../style/SearchCountry.module.scss";
 
 const CountriesSearch = ({ formData, setFormData, errors, setErrors }) => {
   const dispatch = useDispatch();

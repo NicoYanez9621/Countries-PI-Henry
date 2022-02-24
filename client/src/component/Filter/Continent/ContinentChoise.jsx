@@ -1,6 +1,6 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
-import style from "./ContinentChoise.module.scss";
+import style from "../../../style/ContinentChoise.module.scss";
 
 import { filter_countries } from "../../../redux/actions/index";
 

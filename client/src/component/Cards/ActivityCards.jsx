@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { get_activities } from "../../redux/actions";
 import ActivitiesCard from "../Card/ActivitiesCard";
 import Nav from "../Nav/Nav";
-import style from "./ActivityCards.module.scss";
+import style from "../../style/ActivityCards.module.scss";
 
 const ActivityCards = () => {
   const dispatch = useDispatch();

@@ -1,5 +1,5 @@
 import React from "react";
-import style from "./ActivitiesCard.module.scss";
+import style from "../../style/ActivitiesCard.module.scss";
 
 const ActivitiesCard = ({ name, difficulty, duration, season }) => {
   return (

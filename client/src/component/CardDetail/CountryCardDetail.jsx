@@ -1,5 +1,5 @@
 import React from "react";
-import style from "./CountryCardDetail.module.scss";
+import style from "../../style/CountryCardDetail.module.scss";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router";

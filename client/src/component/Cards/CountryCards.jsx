@@ -1,5 +1,5 @@
 import CountryCard from "../Card/CountryCard";
-import style from "./CountryCards.module.scss";
+import style from "../../style/CountryCards.module.scss";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import { get_countries } from "../../redux/actions/index";

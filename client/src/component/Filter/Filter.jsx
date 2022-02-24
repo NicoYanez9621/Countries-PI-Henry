@@ -1,7 +1,7 @@
 import React from "react";
 import ContinentChoise from "./Continent/ContinentChoise";
 import ActivitiesChoise from "./Activities/ActivitiesChoise";
-import style from "./Filter.module.scss";
+import style from "../../style/Filter.module.scss";
 import OrderBy from "./OrderBy/OrderBy";
 
 const Filter = () => {

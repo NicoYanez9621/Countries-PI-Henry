@@ -1,5 +1,5 @@
 import React from "react";
-import style from "./SearchBar.module.scss";
+import style from "../../style/SearchBar.module.scss";
 import { useDispatch, useSelector } from "react-redux";
 import { get_country_name } from "../../redux/actions/index";
 

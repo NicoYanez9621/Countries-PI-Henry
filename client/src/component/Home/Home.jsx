@@ -2,7 +2,7 @@ import React from "react";
 import CountryCards from "../Cards/CountryCards";
 import Filter from "../Filter/Filter";
 import Nav from "../Nav/Nav";
-import style from "./Home.module.scss";
+import style from "../../style/Home.module.scss";
 
 const Home = () => {
   return (

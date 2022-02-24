@@ -4,7 +4,7 @@ import { useDispatch } from "react-redux";
 import { Validate } from "./validations/ActivityCreate";
 import { get_countries, save_activity } from "../../redux/actions/index";
 import Nav from "../Nav/Nav";
-import style from "./ActivityCreateForm.module.scss";
+import style from "../../style/ActivityCreateForm.module.scss";
 import SearchCountry from "./SearchCountry/SearchCountry";
 import SelectedCountries from "./SelectedCountry/SelectedCountries";
 

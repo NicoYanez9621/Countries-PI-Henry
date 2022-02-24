@@ -1,6 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import styles from "./SelectedCountries.module.scss";
+import styles from "../../../style/SelectedCountries.module.scss";
 import { Validate } from "../validations/ActivityCreate";
 
 const SelectedCountries = ({ formData, setFormData, errors, setErrors }) => {

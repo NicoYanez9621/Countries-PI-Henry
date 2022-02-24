@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import style from "./CountryCard.module.scss";
+import style from "../../style/CountryCard.module.scss";
 
 const CountryCard = ({ id, name, flag, continent }) => {
   return (

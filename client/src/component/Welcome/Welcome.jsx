@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import style from "./Welcome.module.scss";
+import style from "../../style/Welcome.module.scss";
 
 const Welcome = () => {
   return (

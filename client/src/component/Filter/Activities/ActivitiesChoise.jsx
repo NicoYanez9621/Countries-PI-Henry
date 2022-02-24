@@ -1,5 +1,5 @@
 import React from "react";
-import style from "./ActivitiesChoise.module.scss";
+import style from "../../../style/ActivitiesChoise.module.scss";
 import { useSelector, useDispatch } from "react-redux";
 import { filter_countries, get_activities } from "../../../redux/actions";
 import { useEffect } from "react";
