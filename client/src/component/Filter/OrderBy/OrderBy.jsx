@@ -1,7 +1,7 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { order_countries } from "../../../redux/actions";
-import style from "../../../style/Order.module.scss";
+import style from "../../../style/OrderBy.module.scss";
 
 const OrderBy = () => {
   const dispatch = useDispatch();
