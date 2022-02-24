@@ -3,7 +3,7 @@ export const filterByActivity = (array, activity) => {
   if (activity !== "all") {
     let newCountriesArray = [];
     for (const country of array) {
-      for (const newActivity of country.Activities) {
+      for (const newActivity of country.TouristActivities) {
         if (newActivity.name === activity) {
           newCountriesArray.push(country);
         }

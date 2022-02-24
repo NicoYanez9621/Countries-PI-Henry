@@ -1,12 +1,18 @@
 import React from "react";
 import style from "./ActivitiesChoise.module.scss";
 import { useSelector, useDispatch } from "react-redux";
-import { filter_countries } from "../../../redux/actions";
+import { filter_countries, get_activities } from "../../../redux/actions";
+import { useEffect } from "react";
 
 const ActivitiesChoise = () => {
   let activities = useSelector((state) => state.activities);
   let filter_and_order = useSelector((state) => state.filtering_and_ordering);
   const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(get_activities());
+  }, [dispatch]);
+
+  /* console.log(activities); */
 
   const handleSelect = (e) => {
     let obj = {
@@ -27,10 +33,10 @@ const ActivitiesChoise = () => {
         defaultValue={filter_and_order.byActivity}
       >
         <option value="all">All</option>
-        {activities.map((activity, index) => {
+        {activities?.map((activity) => {
           return (
-            <option key={index} value={activity}>
-              {activity}
+            <option key={activity.id} value={activity.name}>
+              {activity.name}
             </option>
           );
         })}

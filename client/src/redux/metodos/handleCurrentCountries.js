@@ -5,6 +5,7 @@ import { order } from "./order";
 
 export const handleCurrentCountries = (countries, payload) => {
   let currentCountries = countries;
+
   if (payload.byName.length > 0) {
     currentCountries = filterByName(currentCountries, payload.byName);
   }
