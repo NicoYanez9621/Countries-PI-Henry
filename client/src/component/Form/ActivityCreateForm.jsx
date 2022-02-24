@@ -2,7 +2,7 @@ import React, { useState, useMemo } from "react";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { Validate } from "./validations/ActivityCreate";
-import { save_activity } from "../../redux/actions/index";
+import { get_countries, save_activity } from "../../redux/actions/index";
 import Nav from "../Nav/Nav";
 import style from "./ActivityCreateForm.module.scss";
 import SearchCountry from "./SearchCountry/SearchCountry";
@@ -10,14 +10,16 @@ import SelectedCountries from "./SelectedCountry/SelectedCountries";
 
 const ActivityCreateForm = () => {
   const [formatData, setFormatData] = useState({
-    name: " ",
+    name: "",
     difficulty: "none",
-    duration: "none",
+    duration: "",
     season: [],
     countriesId: [],
   });
   const [error, setError] = useState({});
-  useEffect(() => {});
+  useEffect(() => {
+    dispatch(get_countries());
+  }, []);
   const dispatch = useDispatch();
 
   const handleCheck = (e) => {
@@ -59,12 +61,14 @@ const ActivityCreateForm = () => {
       dispatch(save_activity(formatData));
       alert("Activity created successfully");
       setFormatData({
-        name: " ",
+        name: "",
         difficulty: "none",
-        duration: "none",
+        duration: "",
         season: [],
         countriesId: [],
       });
+    } else {
+      alert("No completo todos los campos");
     }
   };
 
@@ -92,6 +96,7 @@ const ActivityCreateForm = () => {
         >
           <div className={style.group}>
             <input
+              autoComplete="off"
               type="text"
               className={style.input}
               name="name"
