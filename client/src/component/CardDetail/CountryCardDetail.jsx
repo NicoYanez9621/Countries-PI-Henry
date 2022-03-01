@@ -34,7 +34,9 @@ const CountryCardDetail = () => {
         <span>
           Tourisct Activities:
           {countryById.TouristActivities &&
-            countryById.TouristActivities.map((t) => <li>{t.name}</li>)}
+            countryById.TouristActivities.map((t) => (
+              <li key={t.id}>{t.name}</li>
+            ))}
         </span>
       </div>
     </div>
