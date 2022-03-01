@@ -131,7 +131,7 @@ const CountryCards = () => {
         Siguiente
       </button>
       <div className={style.contenedor}>
-        {final[state.paginaActual] &&
+        {final[state.paginaActual].length > 0 ? (
           final[state.paginaActual].map((c) => (
             <CountryCard
               key={c.id}
@@ -140,7 +140,10 @@ const CountryCards = () => {
               flag={c.flag}
               continent={c.continent}
             />
-          ))}
+          ))
+        ) : (
+          <p>No se encontro coincidencia</p>
+        )}
       </div>
     </div>
   );

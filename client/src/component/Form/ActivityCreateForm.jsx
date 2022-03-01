@@ -1,6 +1,7 @@
 import React, { useState, useMemo } from "react";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
 import { Validate } from "./validations/ActivityCreate";
 import { get_countries, save_activity } from "../../redux/actions/index";
 import Nav from "../Nav/Nav";
@@ -21,6 +22,7 @@ const ActivityCreateForm = () => {
     dispatch(get_countries());
   }, []);
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const handleCheck = (e) => {
     let season = formatData.season;
@@ -67,6 +69,7 @@ const ActivityCreateForm = () => {
         season: [],
         countriesId: [],
       });
+      navigate("/activities");
     } else {
       alert("No completo todos los campos");
     }
