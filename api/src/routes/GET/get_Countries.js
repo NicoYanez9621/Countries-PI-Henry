@@ -13,7 +13,6 @@ const get_Countries = async (req, res) => {
   let countries = getCountry();
   //console.log(countries);
   countries.then((r) => {
-    //si hay datos en la base de datos los uso y entrego todos los paises
     if (r.length > 0) {
       if (name) {
         let countryFiltrado = r.filter((e) =>
@@ -30,7 +29,6 @@ const get_Countries = async (req, res) => {
         return res.json(r);
       }
     } else {
-      // si no hay anda en la base de datos hago la peticion y guardo los datos en la base de datos
       axios
         .get("https://restcountries.com/v3/all")
         .then((respon) => {
@@ -41,12 +39,10 @@ const get_Countries = async (req, res) => {
               name: c.name.common,
               flag: c.flags[0],
               continent: c.region,
-              // para los paises que no tienen capital
               capital:
                 c.capital === undefined
                   ? "does not have an assigned capital"
                   : c.capital[0],
-              // para los paises que no tienen subregion
               subregion:
                 c.subregion === undefined
                   ? "does not have an assigned region"
@@ -58,7 +54,6 @@ const get_Countries = async (req, res) => {
           });
           Country.bulkCreate(countriesApi);
         })
-        //ahora que ya tengo los datos guardados en la base de datos los consumo desde alli
         .then(() => {
           let countriesGuardadosDb = getCountry();
           if (name) {

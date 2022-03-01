@@ -8,13 +8,13 @@ const get_Countries_idCountry = async (req, res) => {
         include: TouristActivity,
       });
       if (!country) {
-        return res.status(400).json({ error: "provided id not found" });
+        return res.status(404).json({ error: "provided id not found" });
       } else {
-        return res.status(200).json(country);
+        return res.json(country);
       }
     }
   } catch (err) {
-    return res.json({ error: err });
+    return res.status(404).json({ error: err });
   }
 };
 
