@@ -50,17 +50,13 @@ const rootReducer = (state = initialstate, { type, payload }) => {
     case GET_COUNTRY_NAME: {
       let currentCountries = payload.data;
 
-      // Esta parte la puedo refactorizar llevandola al
-      // handleCurrentCountries
-
-      // Llama al filtro por acitividad turística
       if (payload.filtering_and_ordering.byActivity.length > 0) {
         currentCountries = filterByActivity(
           currentCountries,
           payload.byActivity
         );
       }
-      // Llama al ordenamiento
+
       if (payload.filtering_and_ordering.orderBy.length > 0) {
         currentCountries = order(currentCountries, payload.orderBy);
       }
