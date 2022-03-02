@@ -24,8 +24,8 @@ const initialstate = {
   filtering_and_ordering: {
     byName: "",
     byContinent: "all",
-    orderBy: "",
-    byActivity: "",
+    orderBy: "all",
+    byActivity: "all",
   },
 };
 

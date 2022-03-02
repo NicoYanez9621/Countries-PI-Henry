@@ -3,12 +3,19 @@ const post_Activity = async (req, res) => {
   const { name, difficulty, duration, season, countriesId } = req.body;
 
   try {
-    var activityCreated = await TouristActivity.create({
+    var obj = {
       name,
       difficulty,
       duration,
       season,
+    };
+    const [activityCreated, created] = await TouristActivity.findOrCreate({
+      where: {
+        name: name,
+      },
+      defaults: obj,
     });
+
     for (let i = 0; i < countriesId.length; i++) {
       await activityCreated.addCountries(countriesId[i]);
     }

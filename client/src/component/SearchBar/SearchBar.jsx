@@ -1,19 +1,20 @@
 import React from "react";
 import style from "../../style/SearchBar.module.scss";
 import { useDispatch, useSelector } from "react-redux";
-import { get_country_name } from "../../redux/actions/index";
+import { filter_countries, get_country_name } from "../../redux/actions/index";
 
 const SearchBar = () => {
   const dispatch = useDispatch();
   let filter_and_order = useSelector((state) => state.filtering_and_ordering);
 
-  const handleOnSubmit = (e) => {
+  const handleOnSubmit = async (e) => {
     e.preventDefault();
     let obj = {
       ...filter_and_order,
       byName: e.target.name.value,
     };
-    dispatch(get_country_name(obj));
+    await dispatch(get_country_name(obj));
+    dispatch(filter_countries(obj));
   };
 
   return (

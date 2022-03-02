@@ -6,12 +6,12 @@ import { get_countries } from "../../redux/actions/index";
 import React, { useEffect, useState } from "react";
 
 const CountryCards = () => {
+  let countries = useSelector((state) => state.currentCountries);
+
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(get_countries());
   }, [dispatch]);
-
-  let countries = useSelector((state) => state.currentCountries);
 
   const [state, setState] = useState({
     paginaActual: 0,
@@ -32,6 +32,7 @@ const CountryCards = () => {
       });
     }
   };
+
   var min = 9;
   var max = 19;
   var array = [];
