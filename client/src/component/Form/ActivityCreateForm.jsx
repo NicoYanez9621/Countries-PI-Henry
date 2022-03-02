@@ -1,9 +1,13 @@
 import React, { useState, useMemo } from "react";
 import { useEffect } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { Validate } from "./validations/ActivityCreate";
-import { get_countries, save_activity } from "../../redux/actions/index";
+import {
+  get_activities,
+  get_countries,
+  save_activity,
+} from "../../redux/actions/index";
 import Nav from "../Nav/Nav";
 import style from "../../style/ActivityCreateForm.module.scss";
 import SearchCountry from "./SearchCountry/SearchCountry";
@@ -18,9 +22,14 @@ const ActivityCreateForm = () => {
     countriesId: [],
   });
   const [error, setError] = useState({});
+
+  let activities = useSelector((state) => state.activities);
+
   useEffect(() => {
     dispatch(get_countries());
+    dispatch(get_activities());
   }, []);
+
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
@@ -60,16 +69,23 @@ const ActivityCreateForm = () => {
       formatData.season &&
       formatData.countriesId
     ) {
-      dispatch(save_activity(formatData));
-      alert("Activity created successfully");
-      setFormatData({
-        name: "",
-        difficulty: "none",
-        duration: "",
-        season: [],
-        countriesId: [],
-      });
-      navigate("/activities");
+      let activity = activities.filter(
+        (a) => a.name.toLowerCase() === formatData.name.toLowerCase()
+      );
+      if (activity.length > 0) {
+        alert("La actividad ya existe");
+      } else {
+        dispatch(save_activity(formatData));
+        alert("Activity created successfully");
+        setFormatData({
+          name: "",
+          difficulty: "none",
+          duration: "",
+          season: [],
+          countriesId: [],
+        });
+        navigate("/activities");
+      }
     } else {
       alert("No completo todos los campos");
     }
