@@ -32,7 +32,8 @@ const CountryCards = () => {
       });
     }
   };
-
+  var min = 9;
+  var max = 19;
   var array = [];
   for (let i = 1; i <= countries.length / 10 + 1; i++) {
     let page = "page";
@@ -40,14 +41,13 @@ const CountryCards = () => {
     if (page === "page1") {
       page = countries.slice(0, 9);
     } else {
-      let min = 9;
-      let max = 19;
       page = countries.slice(min, max);
       min = min + 10;
       max = max + 10;
     }
     array.push(page);
   }
+  console.log(array[state.paginaActual]);
   for (let i = array.length - 1; i > 0; i--) {
     if (!array[i].length) {
       array.pop();
