@@ -7,7 +7,7 @@ import style from "../../style/Home.module.scss";
 const Home = () => {
   return (
     <div className={style.contenedor}>
-      <Nav />
+      <Nav name="🏠 Home" />
       <div className={style.contenido}>
         <Filter className={style.filter} />
 

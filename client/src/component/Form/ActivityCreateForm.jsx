@@ -105,7 +105,7 @@ const ActivityCreateForm = () => {
 
   return (
     <div className={style.contenedor}>
-      <Nav />
+      <Nav name="🏠 Home" />
       <div className={style.form}>
         <h2>Create Activity</h2>
         <form

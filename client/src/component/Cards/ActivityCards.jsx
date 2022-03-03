@@ -14,7 +14,7 @@ const ActivityCards = () => {
 
   return (
     <div className={style.contenedor}>
-      <Nav />
+      <Nav name="🏠 Home" />
 
       <div className={style.contenido}>
         {/*  <ActivitiesChoise /> */}

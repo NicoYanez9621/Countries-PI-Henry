@@ -36,7 +36,7 @@ const SearchBar = () => {
           value={input}
           onChange={(e) => onChange(e)}
         />
-        <input className={style.inputSubmit} type="submit" value="Search" />
+        <input className={style.inputSubmit} type="submit" value="Search 🔍" />
       </form>
     </div>
   );

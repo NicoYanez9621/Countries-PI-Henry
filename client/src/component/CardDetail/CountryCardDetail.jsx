@@ -17,7 +17,7 @@ const CountryCardDetail = () => {
 
   return (
     <div className={style.contenedor}>
-      <Nav />
+      <Nav name="👈 Volver a Home" />
       <div className={style.contenido}>
         <div className={style.siderbarTexts}>
           <h1>{countryById.name}</h1>
