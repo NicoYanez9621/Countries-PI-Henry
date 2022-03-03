@@ -88,6 +88,7 @@ const ActivityCreateForm = () => {
       }
     } else {
       alert("No completo todos los campos");
+      setError(Validate({ ...formatData }));
     }
   };
 
