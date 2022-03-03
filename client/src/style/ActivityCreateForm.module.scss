@@ -20,7 +20,7 @@
     .error {
       color: #f00;
       font-family: "Open Sans", sans-serif;
-      font-size: 12px;
+      font-size: 13px;
       margin-bottom: 1rem;
     }
     .groupTwo {
@@ -55,6 +55,9 @@
         border: none;
         background: #fff;
       }
+      .inputError {
+        border: #f00 solid 3px;
+      }
       input:focus {
         outline: none;
         border: 1px solid #002448;
@@ -77,7 +80,7 @@
     }
     .botons {
       width: 50%;
-      background: #123174;
+      background: #143988;
       border-radius: 5px;
       border: none;
       padding: 12px;
@@ -85,9 +88,16 @@
       margin: 16px 0;
       font-size: 16px;
       margin-left: 8rem;
+      justify-content: center;
+    }
+    .botons:disabled {
+      background: #505050;
+    }
+    .botons:disabled:hover {
+      background: #505050;
     }
     .botons:hover {
-      background: #143988;
+      background: #081c46;
       cursor: pointer;
     }
   }

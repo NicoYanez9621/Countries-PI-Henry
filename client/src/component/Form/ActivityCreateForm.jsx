@@ -73,7 +73,7 @@ const ActivityCreateForm = () => {
         (a) => a.name.toLowerCase() === formatData.name.toLowerCase()
       );
       if (activity.length > 0) {
-        alert("La actividad ya existe");
+        alert("Activity already exists");
       } else {
         dispatch(save_activity(formatData));
         alert("Activity created successfully");
@@ -87,7 +87,7 @@ const ActivityCreateForm = () => {
         navigate("/activities");
       }
     } else {
-      alert("No completo todos los campos");
+      alert("Complete the fields before creating");
       setError(Validate({ ...formatData }));
     }
   };
@@ -99,8 +99,10 @@ const ActivityCreateForm = () => {
       error.duration ||
       error.season ||
       error.countriesId
-    )
+    ) {
       return true;
+    }
+
     return false;
   }, [error]);
 
