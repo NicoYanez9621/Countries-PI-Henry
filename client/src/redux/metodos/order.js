@@ -1,6 +1,6 @@
 export const order = (array, orderBy) => {
   if (orderBy === "asc") {
-    array = array.sort((a, b) => {
+    array = array.slice().sort((a, b) => {
       var nameA = a.name.toUpperCase();
       var nameB = b.name.toUpperCase();
       if (nameA < nameB) {
@@ -12,7 +12,7 @@ export const order = (array, orderBy) => {
       return 0;
     });
   } else if (orderBy === "dsc") {
-    array = array.sort((a, b) => {
+    array = array.slice().sort((a, b) => {
       var nameA = a.name.toUpperCase();
       var nameB = b.name.toUpperCase();
       if (nameA > nameB) {
@@ -24,9 +24,9 @@ export const order = (array, orderBy) => {
       return 0;
     });
   } else if (orderBy === "hp") {
-    array = array.sort((b, a) => a.population - b.population);
+    array = array.slice().sort((b, a) => a.population - b.population);
   } else if (orderBy === "sp") {
-    array = array.sort((b, a) => b.population - a.population);
+    array = array.slice().sort((b, a) => b.population - a.population);
   }
 
   return array;
