@@ -10,7 +10,7 @@ export const ORDER_COUNTRIES = "ORDER_COUNTRIES";
 
 export const get_countries = () => async (dispatch) => {
   try {
-    let countries = await axios.get(`http://localhost:3001/countries`);
+    let countries = await axios.get(`/countries`);
     return dispatch({
       type: GET_COUNTRIES,
       payload: countries.data,
@@ -22,7 +22,7 @@ export const get_countries = () => async (dispatch) => {
 
 export const getCountryById = (id) => async (dispatch) => {
   try {
-    let response = await axios.get(`http://localhost:3001/countries/${id}`);
+    let response = await axios.get(`/countries/${id}`);
     return dispatch({ type: GET_COUNTRY_BY_ID, payload: response.data });
   } catch (error) {
     console.log(error);
@@ -33,7 +33,7 @@ export const get_country_name =
   (filtering_and_ordering) => async (dispatch) => {
     try {
       let { data } = await axios.get(
-        `http://localhost:3001/countries?name=${filtering_and_ordering.byName}`
+        `/countries?name=${filtering_and_ordering.byName}`
       );
       return dispatch({
         type: GET_COUNTRY_NAME,
@@ -46,7 +46,7 @@ export const get_country_name =
 
 export const get_activities = () => async (dispatch) => {
   try {
-    let activities = await axios.get(`http://localhost:3001/activity`);
+    let activities = await axios.get(`/activity`);
     return dispatch({
       type: GET_ACTIVITIES,
       payload: activities.data,
@@ -59,7 +59,7 @@ export const get_activities = () => async (dispatch) => {
 export const save_activity = (data) => async (dispatch) => {
   console.log("Data enviada:", data);
   try {
-    await axios.post("http://localhost:3001/activity", data);
+    await axios.post("/activity", data);
   } catch (e) {
     console.log(e);
   }
