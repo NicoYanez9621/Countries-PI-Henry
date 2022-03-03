@@ -11,7 +11,7 @@ const CountryCard = ({ id, name, flag, continent }) => {
         </div>
         <div className={style.info}>
           <h2>{name}</h2>
-          <span>Continente: {continent}</span>
+          <span>Continent: {continent}</span>
         </div>
       </div>
     </Link>

@@ -58,11 +58,11 @@ const CountryCards = () => {
   return (
     <div className={style.contenedorGral}>
       <button onClick={handlerPrev} value={1}>
-        ⏮ Anterior
+        ⏮ Previous
       </button>
       <span className={style.span}>{state.paginaActual}</span>
       <button onClick={handlerNext} value={1}>
-        Siguiente ⏭
+        Next ⏭
       </button>
       <div className={style.contenedor}>
         {array[state.paginaActual].length > 0 ? (
