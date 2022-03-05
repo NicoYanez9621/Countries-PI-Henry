@@ -9,7 +9,7 @@
   padding: 15px;
   background-color: rgba(0, 0, 0, 0.534);
   width: 50%;
-  height: auto;
+  overflow-y: auto;
   span {
     margin-bottom: 1rem;
   }
@@ -28,7 +28,7 @@
     }
   }
   .img {
-    width: 30vw;
+    width: 20vw;
     border-radius: 15px;
     margin-top: 1rem;
     margin-bottom: 1rem;

@@ -1,5 +1,7 @@
 .link {
   text-decoration: none;
+  display: flex;
+  justify-content: center;
   .contenedor {
     background-color: rgba(0, 0, 0, 0.767);
     color: white;

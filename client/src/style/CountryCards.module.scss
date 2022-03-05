@@ -1,38 +1,45 @@
 .contenedorGral {
   position: relative;
-  button {
-    margin-top: 20px;
-    margin-left: 20px;
-    width: 100px;
-    height: 40px;
-    border-radius: 10px;
-    background-color: #ffffff;
-    border: none;
+  .paginado {
+    display: flex;
+    justify-content: center;
+    height: auto;
+    button {
+      margin-top: 20px;
+      margin-left: 20px;
+      width: 100px;
+      height: 40px;
+      border-radius: 10px;
+      background-color: #ffffff;
+      border: none;
+    }
+    button:hover {
+      cursor: pointer;
+      background-color: #1f53c5;
+      color: white;
+    }
+    .span {
+      font-size: 18px;
+      margin-left: 20px;
+      padding: 10px;
+      background-color: white;
+      border-radius: 50px;
+      color: black;
+    }
   }
-  button:hover {
-    cursor: pointer;
-    background-color: #1f53c5;
-    color: white;
-  }
-  .span {
-    margin-left: 20px;
-    padding: 10px;
-    background-color: white;
-    border-radius: 50px;
-    color: black;
-  }
+
   .contenedor {
     display: grid;
-    grid-template-columns: repeat(auto-fill, 400px);
-    justify-content: center;
+    grid-template-columns: repeat(auto-fill, 300px);
+    justify-content: space-between;
     padding: 0.5rem;
     border-radius: 0.5rem;
     position: relative;
     width: 95%;
-    overflow-y: auto;
     margin-left: 2%;
     margin-top: 1%;
     background-color: rgba(0, 0, 0, 0.753);
+    overflow-y: auto;
   }
   @media screen and (min-width: 360px) {
     .contenedor {

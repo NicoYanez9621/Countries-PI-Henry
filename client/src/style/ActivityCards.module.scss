@@ -1,19 +1,45 @@
-.contenedor {
-  color: white;
+.contenedorGral {
+  position: relative;
+  .paginado {
+    display: flex;
+    justify-content: center;
+    height: auto;
+    button {
+      margin-top: 20px;
+      margin-left: 20px;
+      width: 100px;
+      height: 40px;
+      border-radius: 10px;
+      background-color: #ffffff;
+      border: none;
+    }
+    button:hover {
+      cursor: pointer;
+      background-color: #1f53c5;
+      color: white;
+    }
+    .span {
+      font-size: 18px;
+      margin-left: 20px;
+      padding: 10px;
+      background-color: white;
+      border-radius: 50px;
+      color: black;
+    }
+  }
 
   .contenido {
     display: grid;
-    grid-template-columns: repeat(auto-fill, 400px);
+    grid-template-columns: repeat(auto-fill, 300px);
     justify-content: center;
     padding: 20px;
     padding-top: 40px;
     position: relative;
     width: 95%;
-    height: auto;
     background-color: rgba(0, 0, 0, 0.753);
     margin-top: 1%;
     margin-left: 1.2%;
-
+    color: white;
     overflow-y: auto;
   }
 }

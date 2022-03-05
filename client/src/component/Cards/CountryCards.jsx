@@ -33,19 +33,16 @@ const CountryCards = () => {
     }
   };
 
-  var min = 9;
-  var max = 19;
+  var min = 0;
+  var max = 6;
   var array = [];
   for (let i = 1; i <= countries.length / 10 + 1; i++) {
     let page = "page";
     page += i;
-    if (page === "page1") {
-      page = countries.slice(0, 9);
-    } else {
-      page = countries.slice(min, max);
-      min = min + 10;
-      max = max + 10;
-    }
+    page = countries.slice(min, max);
+    min = min + 6;
+    max = max + 6;
+
     array.push(page);
   }
   console.log(array[state.paginaActual]);
@@ -57,13 +54,16 @@ const CountryCards = () => {
 
   return (
     <div className={style.contenedorGral}>
-      <button onClick={handlerPrev} value={1}>
-        ⏮ Previous
-      </button>
-      <span className={style.span}>{state.paginaActual}</span>
-      <button onClick={handlerNext} value={1}>
-        Next ⏭
-      </button>
+      <div className={style.paginado}>
+        <button onClick={handlerPrev} value={1}>
+          ⏮ Previous
+        </button>
+        <h2 className={style.span}>{state.paginaActual}</h2>
+        <button onClick={handlerNext} value={1}>
+          Next ⏭
+        </button>
+      </div>
+
       <div className={style.contenedor}>
         {array[state.paginaActual].length > 0 ? (
           array[state.paginaActual].map((c) => (
