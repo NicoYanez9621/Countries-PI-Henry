@@ -2,15 +2,18 @@ import CountryCard from "../Card/CountryCard";
 import style from "../../style/CountryCards.module.scss";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
-import { get_countries } from "../../redux/actions/index";
+import { get_countries, get_country_limpiar } from "../../redux/actions/index";
 import React, { useEffect, useState } from "react";
 
 const CountryCards = () => {
   let countries = useSelector((state) => state.currentCountries);
 
   const dispatch = useDispatch();
-  useEffect(async () => {
-    await dispatch(get_countries());
+  useEffect(() => {
+    dispatch(get_countries());
+    return () => {
+      dispatch(get_country_limpiar());
+    };
   }, [dispatch]);
 
   const [state, setState] = useState({
