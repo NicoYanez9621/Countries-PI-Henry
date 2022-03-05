@@ -9,8 +9,8 @@ const CountryCards = () => {
   let countries = useSelector((state) => state.currentCountries);
 
   const dispatch = useDispatch();
-  useEffect(() => {
-    dispatch(get_countries());
+  useEffect(async () => {
+    await dispatch(get_countries());
   }, [dispatch]);
 
   const [state, setState] = useState({

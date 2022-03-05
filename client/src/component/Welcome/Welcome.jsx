@@ -8,7 +8,7 @@ const Welcome = () => {
       <h1>Welcome to Countries-App</h1>
       <form>
         <Link to={`/home`}>
-          <a href="http://localhost:3000/home">
+          <a href="/home">
             <span></span>
             <span></span>
             <span></span>

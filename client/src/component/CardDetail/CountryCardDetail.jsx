@@ -3,7 +3,7 @@ import style from "../../style/CountryCardDetail.module.scss";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router";
-import { getCountryById } from "../../redux/actions";
+import { getCountryById, get_country_limpiar } from "../../redux/actions";
 import Nav from "../Nav/Nav";
 
 const CountryCardDetail = () => {
@@ -12,6 +12,9 @@ const CountryCardDetail = () => {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getCountryById(id));
+    return () => {
+      dispatch(get_country_limpiar());
+    };
   }, [dispatch, id]);
   console.log(countryById);
 

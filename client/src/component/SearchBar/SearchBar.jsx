@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import style from "../../style/SearchBar.module.scss";
 import { useDispatch, useSelector } from "react-redux";
 import { filter_countries, get_country_name } from "../../redux/actions/index";
@@ -7,6 +7,23 @@ const SearchBar = () => {
   const [input, setInput] = useState("");
   const dispatch = useDispatch();
   let filter_and_order = useSelector((state) => state.filtering_and_ordering);
+
+  useEffect(async () => {
+    await dispatch(
+      get_country_name({
+        ...filter_and_order,
+        byName: input,
+      })
+    );
+    return () => {
+      dispatch(
+        get_country_name({
+          ...filter_and_order,
+          byName: "",
+        })
+      );
+    };
+  }, []);
 
   const handleOnSubmit = async (e) => {
     e.preventDefault();

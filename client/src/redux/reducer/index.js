@@ -6,6 +6,7 @@ import {
   SEARCH_COUNTRIES,
   FILTER_COUNTRIES,
   ORDER_COUNTRIES,
+  GET_COUNTRY_LIMPIAR,
 } from "../actions/index";
 
 import { filterByName } from "../metodos/filterByName";
@@ -44,6 +45,12 @@ const rootReducer = (state = initialstate, { type, payload }) => {
       return {
         ...state,
         countryById: payload,
+      };
+    }
+    case GET_COUNTRY_LIMPIAR: {
+      return {
+        ...state,
+        countryByid: {},
       };
     }
 

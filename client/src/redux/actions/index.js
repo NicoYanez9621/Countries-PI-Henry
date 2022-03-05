@@ -7,6 +7,7 @@ export const GET_ACTIVITIES = "GET_ACTIVITIES";
 export const SEARCH_COUNTRIES = "SEARCH_COUNTRIES";
 export const FILTER_COUNTRIES = "FILTER_COUNTRIES";
 export const ORDER_COUNTRIES = "ORDER_COUNTRIES";
+export const GET_COUNTRY_LIMPIAR = "GET_COUNTRY_LIMPIAR";
 
 export const get_countries = () => async (dispatch) => {
   try {
@@ -79,4 +80,8 @@ export const filter_countries = (data) => {
 
 export const order_countries = (data) => {
   return { type: ORDER_COUNTRIES, payload: data };
+};
+
+export const get_country_limpiar = () => {
+  return { type: GET_COUNTRY_LIMPIAR };
 };

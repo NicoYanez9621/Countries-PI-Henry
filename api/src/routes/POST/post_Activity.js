@@ -16,9 +16,7 @@ const post_Activity = async (req, res) => {
       defaults: obj,
     });
 
-    for (let i = 0; i < countriesId.length; i++) {
-      await activityCreated.addCountries(countriesId[i]);
-    }
+    await activityCreated.addCountries(countriesId);
     return res.json({
       msg: `The activity "${activityCreated.name}" has been created successfully`,
     });
