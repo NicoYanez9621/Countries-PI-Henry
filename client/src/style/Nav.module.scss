@@ -1,39 +1,111 @@
-.contenedor {
-  background-color: rgba(0, 0, 0, 0.712);
-  width: 100%;
-  height: 100px;
-  color: rgb(255, 255, 255);
-  font-size: 20px;
+.nav {
+  background-color: red;
   display: flex;
-  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
-  justify-content: flex-start;
-  position: relative;
-  .link {
-    text-decoration: none;
-    color: white;
-  }
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999999;
+}
+.navButton {
+  text-decoration: none;
+  color: black;
+  margin: 0px 20px 0px 0px;
+}
+.buttonsContainer {
+  margin: 50px 80px 25px 0px;
+}
+.spanText {
+  font-size: 17px;
+  font-weight: 500;
+  color: rgb(226, 226, 226);
+  transition: 0.1s;
+  cursor: pointer;
+}
+.spanText:hover {
+  color: #7562e0;
+}
 
-  span {
-    margin-left: 30px;
+.icon {
+  color: white;
+  display: none;
+}
+.iconClose {
+  color: white;
+  display: none;
+}
+.logo {
+  margin-top: 0;
+}
+@media only screen and (max-width: 900px) {
+  .nav {
+    flex-direction: column;
     align-items: center;
-    background-color: #1f53c5;
-    border-radius: 20px;
-    padding: 8px;
+    justify-content: flex-start;
   }
-  span:hover {
-    background-color: #143988;
+  .navShow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999999;
+    height: 100vh;
+    background-color: black;
   }
-}
-@media screen and (min-width: 360px) {
-  .contenedor {
+  .topNav {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
   }
-}
-@media screen and (min-width: 678px) {
-  .contenedor {
+  .navButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 40px 0;
   }
-}
-@media screen and (min-width: 1024px) {
-  .contenedor {
+  .spanText {
+    font-size: 2rem;
+  }
+  .buttonsContainer {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    flex-direction: column;
+    margin: 0;
+    margin-top: 2rem;
+    left: -100%;
+    transition: 300ms all ease;
+  }
+  .showMenu {
+    display: flex;
+    position: relative;
+    width: 100%;
+    flex-direction: column;
+    margin: 0;
+    margin-top: 2rem;
+    left: -100%;
+    transition: 300ms all ease;
+    left: 0;
+  }
+  .icon {
+    margin-top: 30px;
+    margin-right: 40px;
+    display: inline-block;
+  }
+  .iconClose {
+    display: inline-block;
+    margin-top: 30px;
+    margin-right: 40px;
+    width: 25px;
+    height: 25px;
+  }
+  .logo {
   }
 }

@@ -43,7 +43,7 @@ const SearchBar = () => {
   };
   return (
     <div className={style.contenedor}>
-      <form onSubmit={(e) => handleOnSubmit(e)}>
+      <form className={style.form} onSubmit={(e) => handleOnSubmit(e)}>
         <input
           autoComplete="off"
           name="name"

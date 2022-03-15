@@ -8,9 +8,13 @@ const Filter = () => {
   return (
     <div className={style.contenedor}>
       <h1>Filter</h1>
-      <OrderBy />
-      <ActivitiesChoise />
-      <ContinentChoise />
+      <div className={style.select}>
+        <OrderBy />
+        <ActivitiesChoise />
+      </div>
+      <div className={style.continent}>
+        <ContinentChoise />
+      </div>
     </div>
   );
 };

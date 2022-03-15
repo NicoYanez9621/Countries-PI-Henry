@@ -1,10 +1,13 @@
 .contenedor {
-  position: absolute;
-  right: 30px;
+  margin-left: 3rem;
+  margin-top: 3rem;
+  .form {
+    width: auto;
+  }
   input {
     border: rgb(0, 0, 0) solid 1px;
+    border-radius: 1rem;
     margin: 20px;
-    border-radius: 20px;
     height: 38px;
   }
   .inputText {
@@ -20,5 +23,23 @@
     background-color: #143988;
     color: white;
     cursor: pointer;
+  }
+}
+@media only screen and (max-width: 550px) {
+  .contenedor {
+    display: flex;
+    flex-direction: column;
+    margin-top: 4rem;
+    margin-left: 0%;
+  }
+  .form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .inputText {
+    width: 3rem;
   }
 }
