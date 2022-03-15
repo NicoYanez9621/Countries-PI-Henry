@@ -1,5 +1,5 @@
 .nav {
-  background-color: red;
+  background-color: black;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -25,7 +25,10 @@
   cursor: pointer;
 }
 .spanText:hover {
-  color: #7562e0;
+  color: #100068;
+  background-color: azure;
+  border-radius: 5px;
+  padding: 1rem;
 }
 
 .icon {
