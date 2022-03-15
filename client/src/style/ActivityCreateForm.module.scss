@@ -13,7 +13,7 @@
     width: 65%;
     border-radius: 10px;
     margin: auto;
-    margin-top: 5px;
+    margin-top: 10rem;
     box-shadow: 7px 13px 37px #000;
     border: rgba(255, 255, 255, 0.233) solid 3px;
 
@@ -101,20 +101,22 @@
       cursor: pointer;
     }
   }
-  @media screen and (min-width: 360px) {
-    .form {
-      width: 95%;
-    }
-  }
-  @media screen and (min-width: 678px) {
-    .form {
-      width: 90%;
-    }
-  }
-  @media screen and (min-width: 1024px) {
+
+  @media only screen and (max-width: 1024px) {
     .form {
       width: 80%;
       padding: 0.3rem;
+    }
+  }
+  @media only screen and (max-width: 678px) {
+    .form {
+      width: 90%;
+      margin-top: 15rem;
+    }
+  }
+  @media only screen and (max-width: 480px) {
+    .form {
+      width: 95%;
     }
   }
 }
