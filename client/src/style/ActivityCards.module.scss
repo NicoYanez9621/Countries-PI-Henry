@@ -1,6 +1,6 @@
 .contenedorGral {
   position: relative;
-  margin-top: 10%;
+  margin-top: 10rem;
   .paginado {
     display: flex;
     justify-content: center;
@@ -44,25 +44,12 @@
     overflow-y: auto;
   }
 }
-@media only screen and (max-width: 1024px) {
-  .contenedorGral {
-    margin-top: 15%;
-  }
-}
-@media only screen and (max-width: 900px) {
-  .contenedorGral {
-    margin-top: 20%;
-  }
-}
 @media only screen and (max-width: 550px) {
   .contenedorGral {
-    margin-top: 45%;
+    margin-top: 15rem;
   }
 }
 @media only screen and (max-width: 360px) {
-  .contenedorGral {
-    margin-top: 65%;
-  }
   .contenido {
     grid-template-columns: repeat(auto-fill, 200px);
     justify-content: center;
