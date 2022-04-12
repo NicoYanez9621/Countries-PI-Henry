@@ -1,8 +1,29 @@
-<p align='left'>
-    <img src='https://static.wixstatic.com/media/85087f_0d84cbeaeb824fca8f7ff18d7c9eaafd~mv2.png/v1/fill/w_160,h_30,al_c,q_85,usm_0.66_1.00_0.01/Logo_completo_Color_1PNG.webp' </img>
-</p>
 
-# Individual Project - Henry Countries
+
+# Individual Project - Countries App
+
+Este fue mi proyecto individual en Henry, y es un SPA (aplicación de página única) receptivo que utiliza datos extraídos de una API externa y las siguientes tecnologías:
+
+Front End:
+
+- React JS
+- Redux
+- CSS Modules
+- SASS
+
+Back End:
+
+- Node JS
+- Express JS
+- Sequelize ORM (Sequelize-CLI)
+- PostgreSQL
+
+Algunas de las características de la aplicación:
+
+- Posibilidad de filtrar países por continentes.
+- Buscador por nombre o palabras clave.
+- Creación de actividad turística a través de un formulario controlado.
+- Mostrar detalles de países.
 
 <p align="left">
   <img height="200" src="./countries.png" />
