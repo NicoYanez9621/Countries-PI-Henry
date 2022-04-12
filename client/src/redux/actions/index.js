@@ -70,18 +70,18 @@ export const save_activity = (data) => async (dispatch) => {
 /**********************************************************/
 /**********************************************************/
 
-export const search_countries = (data) => {
-  return { type: SEARCH_COUNTRIES, payload: data };
+export const search_countries = (data) => async (dispatch) => {
+  return dispatch({ type: SEARCH_COUNTRIES, payload: data });
 };
 
-export const filter_countries = (data) => {
-  return { type: FILTER_COUNTRIES, payload: data };
+export const filter_countries = (data) => async (dispatch) => {
+  return dispatch({ type: FILTER_COUNTRIES, payload: data });
 };
 
-export const order_countries = (data) => {
-  return { type: ORDER_COUNTRIES, payload: data };
+export const order_countries = (data) => async (dispatch) => {
+  return dispatch({ type: ORDER_COUNTRIES, payload: data });
 };
 
-export const get_country_limpiar = () => {
-  return { type: GET_COUNTRY_LIMPIAR };
+export const get_country_limpiar = () => async (dispatch) => {
+  return dispatch({ type: GET_COUNTRY_LIMPIAR });
 };

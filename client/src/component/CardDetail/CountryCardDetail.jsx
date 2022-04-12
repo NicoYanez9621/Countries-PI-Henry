@@ -15,7 +15,7 @@ const CountryCardDetail = () => {
     return () => {
       dispatch(get_country_limpiar());
     };
-  }, [dispatch, id]);
+  }, []);
   console.log(countryById);
 
   return (
